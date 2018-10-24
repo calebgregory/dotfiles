@@ -1,4 +1,4 @@
-sudo dnf install git
+sudo dnf install -y git
 
 echo "installed git"
 which git
