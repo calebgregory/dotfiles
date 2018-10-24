@@ -1,0 +1,7 @@
+alias code="cd ~/code"
+alias docs="cd ~/Documents"
+
+alias chr="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+alias go-cover="go test -coverprofile=coverage.out && go tool cover -html=coverage.out && rm coverage.out"
+alias v="mvim ."
+# alias scheme=/Applications/MIT-Scheme.app/Contents/Resources/mit-scheme
