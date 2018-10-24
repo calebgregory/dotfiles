@@ -5,3 +5,6 @@ alias chr="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrom
 alias go-cover="go test -coverprofile=coverage.out && go tool cover -html=coverage.out && rm coverage.out"
 alias v="mvim ."
 # alias scheme=/Applications/MIT-Scheme.app/Contents/Resources/mit-scheme
+
+alias docker-start="sudo systemctl start docker"
+alias docker-test="sudo docker run hello-world"

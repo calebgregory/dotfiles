@@ -25,6 +25,16 @@ GO_ARCHIVE="go$GO_VERSION.$OS-$ARCH.tar.gz"
 wget https://dl.google.com/go/$GO_ARCHIVE
 tar -C /usr/local -xzf $GO_ARCHIVE
 
+# [install Docker](https://docs.docker.com/install/linux/docker-ce/fedora/#install-docker-ce)
+dnf install -y dnf-plugins-core
+dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+dnf install -y docker-ce
+
+# [install janus distrobution of vim](https://github.com/carlhuda/janus)
+dnf install -y ack ctags ruby gvim
+gem install rake
+curl -L https://bit.ly/janus-bootstrap | bash
+
 # # install puppet
 #   # add to registry https://puppet.com/docs/puppet/6.0/puppet_platform.html
 # sudo rpm -Uvh https://yum.puppet.com/puppet6/puppet6-release-fedora-27.noarch.rpm
