@@ -20,4 +20,6 @@ echo "starting puppet service"
 
 sudo /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
 
+git clone https://github.com/calebgregory/manifests /etc/puppetlabs/code/environments/production
+
 # ln -sv ~/.dotfiles/.{aliases,exports,functions,gitconfig,path,zshrc,gvimrc.after,vimrc.after,tmux.conf} ~
