@@ -12,11 +12,9 @@ which git
 # applications
 
 # [install Google Chrome](https://www.if-not-true-then-false.com/2010/install-google-chrome-with-yum-on-fedora-red-hat-rhel/)
-dnf install fedora-workstation-repositories
-
+dnf install -y fedora-workstation-repositories
 dnf config-manager --set-enabled google-chrome
-
-dnf install google-chrome-stable
+dnf install -y google-chrome-stable
 
 # software development
 
