@@ -20,4 +20,4 @@ echo "starting puppet service"
 
 sudo /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
 
-# ln -sv ~/.dotfiles/.{aliases,exports,functions,path,zshrc,gvimrc.after,vimrc.after,tmux.conf} ~
+# ln -sv ~/.dotfiles/.{aliases,exports,functions,gitconfig,path,zshrc,gvimrc.after,vimrc.after,tmux.conf} ~

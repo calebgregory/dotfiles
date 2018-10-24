@@ -1,0 +1,5 @@
+[core]
+	editor = /usr/bin/vim
+[user]
+	email = calebgregory@gmail.com
+	name = Caleb Gregory
