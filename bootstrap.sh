@@ -3,21 +3,21 @@
 OS=linux
 ARCH=amd64
 
-sudo -i
+### setup
 
 mkdir ~/tmp/
 cd ~/tmp/
 
 ### primary dependencies
 
-dnf install -y git
+sudo dnf install -y git
 
 ### applications
 
 # [install Google Chrome](https://www.if-not-true-then-false.com/2010/install-google-chrome-with-yum-on-fedora-red-hat-rhel/)
-dnf install -y fedora-workstation-repositories
-dnf config-manager --set-enabled google-chrome
-dnf install -y google-chrome-stable
+sudo dnf install -y fedora-workstation-repositories
+sudo dnf config-manager --set-enabled google-chrome
+sudo dnf install -y google-chrome-stable
 
 ### languages
 
@@ -26,7 +26,7 @@ GO_VERSION="1.11.1"
 GO_ARCHIVE="go$GO_VERSION.$OS-$ARCH.tar.gz"
 
 wget "https://dl.google.com/go/$GO_ARCHIVE"
-tar -C /usr/local -xzf "$GO_ARCHIVE"
+sudo tar -C /usr/local -xzf "$GO_ARCHIVE"
 
 # [install nodejs using nvm](https://github.com/creationix/nvm#install-script)
 #   must
@@ -39,15 +39,15 @@ curl -o- "https://raw.githubusercontent.com/creationix/nvm/v$NVM_VERSION/install
 ### infrastructural tools
 
 # [install Docker](https://docs.docker.com/install/linux/docker-ce/fedora/#install-docker-ce)
-dnf install -y dnf-plugins-core
-dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
-dnf install -y docker-ce
+sudo dnf install -y dnf-plugins-core
+sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install -y docker-ce
 
 # [install awscli](https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-bundle.html)
-dnf install -y python
+sudo dnf install -y python
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
-./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 
 # [install terraform](https://www.terraform.io/downloads.html)
 TERRAFORM_VERSION="0.11.10"
@@ -55,15 +55,15 @@ TERRAFORM_ARCHIVE="$TERRAFORM_VERSION/terraform_${TERRAFORM_VERSION}_${OS}_${ARC
 
 wget "https://releases.hashicorp.com/terraform/$TERRAFORM_ARCHIVE"
 unzip "$TERRAFORM_ARCHIVE"
-mv ./terraform /usr/local/bin
+sudo mv ./terraform /usr/local/bin
 
 # [install virtualbox](https://medium.com/@Joachim8675309/vagrant-and-friends-on-fedora-28-37b8cbc47e47)
 
   # download virtualbox.repo file for yum
-wget -P /etc/yum.repos.d/ https://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
-dnf update -y
+sudo wget -P /etc/yum.repos.d/ https://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+sudo dnf update -y
   # install kernel development packages
-dnf install -y \
+sudo dnf install -y \
   binutils \
   gcc \
   make \
@@ -75,12 +75,12 @@ dnf install -y \
   kernel-devel \
   dkms
   # install/setup VirtualBox 5.2.x
-dnf install -y VirtualBox-5.2
-/usr/lib/virtualbox/vboxdrv.sh setup
+sudo dnf install -y VirtualBox-5.2
+sudo /usr/lib/virtualbox/vboxdrv.sh setup
   # test version
-vboxmanage --version
+sudo vboxmanage --version
   # enable current user
-usermod -a -G vboxusers ${USER}
+sudo usermod -a -G vboxusers ${USER}
 
 # [install vagrant](https://medium.com/@Joachim8675309/vagrant-and-friends-on-fedora-28-37b8cbc47e47)
 VAGRANT_VERSION="2.2.0"
@@ -92,22 +92,22 @@ mv ./vagrant /usr/local/bin
 ### code editor, shell
 
 # [install janus distribution of vim](https://github.com/carlhuda/janus)
-dnf install -y ack
-dnf install -y ctags
-dnf install -y gvim
-dnf install -y ruby
-gem install rake
+sudo dnf install -y ack
+sudo dnf install -y ctags
+sudo dnf install -y gvim
+sudo dnf install -y ruby
+sudo gem install rake
 curl -L https://bit.ly/janus-bootstrap | bash
 
 # install tmux
-dnf install -y tmux
+sudo dnf install -y tmux
 
 # install [zsh with oh-my-zsh framework](https://github.com/robbyrussell/oh-my-zsh)
-dnf install -y zsh
+sudo dnf install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # [install the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
-dnf install -y the_silver_searcher
+sudo dnf install -y the_silver_searcher
 
 ### download dotfiles
 
@@ -115,4 +115,9 @@ git clone https://github.com/calebgregory/dotfiles ~/.dotfiles
 
 ### symlink dotfiles (whitelist-style, to prevent accidents)
 
+cd $HOME
 ln -s ~/.dotfiles/.{aliases,exports,functions,gitconfig,gvimrc.after,path,tmux.conf,vimrc.after,zshrc} ~
+
+### clean up
+
+rm -rf ~/tmp/
