@@ -111,7 +111,8 @@ sudo dnf install -y the_silver_searcher
 
 ### nifty tools
 
-sudo dnf install -y feh
+sudo dnf install -y feh # image displayer
+sudo dnf install -y xclip # command line clipboard grabber
 
 ### download dotfiles
 
