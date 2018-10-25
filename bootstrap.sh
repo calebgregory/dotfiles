@@ -109,6 +109,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # [install the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
 sudo dnf install -y the_silver_searcher
 
+### nifty tools
+
+sudo dnf install -y feh
+
 ### download dotfiles
 
 git clone https://github.com/calebgregory/dotfiles ~/.dotfiles
