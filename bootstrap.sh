@@ -28,6 +28,9 @@ GO_ARCHIVE="go$GO_VERSION.$OS-$ARCH.tar.gz"
 wget "https://dl.google.com/go/$GO_ARCHIVE"
 sudo tar -C /usr/local -xzf "$GO_ARCHIVE"
 
+# [make go workspace](https://golang.org/doc/code.html#Workspaces)
+mkdir -p ~/code/go
+
 # [install nodejs using nvm](https://github.com/creationix/nvm#install-script)
 #   must
 #     nvm install <version>
@@ -95,6 +98,7 @@ mv ./vagrant /usr/local/bin
 sudo dnf install -y ack
 sudo dnf install -y ctags
 sudo dnf install -y gvim
+sudo dnf install -y vim
 sudo dnf install -y ruby
 sudo gem install rake
 curl -L https://bit.ly/janus-bootstrap | bash
