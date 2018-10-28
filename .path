@@ -1,1 +1,1 @@
-export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/opts/bin:/usr/local/go/bin:$GOPATH:$GOPATH/bin"
+export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/opts/bin:/usr/local/go/bin:$GOPATH:$GOPATH/bin:$HOME/.go_appengine"
