@@ -128,6 +128,11 @@ cd $HOME
 rm ~/.zshrc # has to be removed for symlink
 ln -s ~/.dotfiles/.{aliases,exports,functions,gitconfig,gvimrc.after,path,tmux.conf,vimrc.after,zshrc} ~
 
+### GUI
+
+gsettings set org.gnome.desktop.background picture-uri ~/.dotfiles/assets/sea_drawing.jpg
+gsettings set org.gnome.desktop.screensaver picture-uri ~/.dotfiles/assets/sea_drawing.jpg
+
 ### clean up
 
 rm -rf ~/tmp/
