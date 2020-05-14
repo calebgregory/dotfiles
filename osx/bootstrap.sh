@@ -4,7 +4,7 @@ mkdir ~/tmp
 cd ~/tmp
 
 # [install homebrew](https://brew.sh/)
-# curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | bash
 
 utils=(
   git
@@ -28,10 +28,10 @@ done
 
 # [install python, use miniconda to manage python versions](https://docs.conda.io/en/latest/miniconda.html)
 # [installation instructions](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html)
-# echo "!!! Answer no to question about running 'conda init' !!!"
-# wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
-# bash ~/miniconda.sh -p $HOME/miniconda
-# source ~/miniconda/bin/activate; conda init zsh
+echo "!!! Answer no to question about running 'conda init' !!!"
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -p $HOME/miniconda
+source ~/miniconda/bin/activate; conda init zsh
 
 # [install nodejs using nvm](https://github.com/nvm-sh/nvm)
 NVM_VERSION="0.35.3"
