@@ -14,7 +14,7 @@ utils=(
   ctags
   gvim
   vim
-  ruby
+  rbenv
 
   # other utils
   wget
