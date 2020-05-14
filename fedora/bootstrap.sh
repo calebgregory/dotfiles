@@ -122,19 +122,10 @@ sudo dnf install -y xclip # command line clipboard grabber
 
 git clone https://github.com/calebgregory/dotfiles ~/.dotfiles
 
-### symlink dotfiles (whitelist-style, to prevent accidents)
+cd ~/.dotfiles
+bash ./bootstrap-util/symlink-dotfiles.sh
 
-cd $HOME
-rm ~/.zshrc # has to be removed for symlink
-ln -s ~/.dotfiles/.{aliases,exports,functions,gitconfig,gvimrc.after,path,tmux.conf,vimrc.after,zshrc} ~
-
-### install vim plugins
-
-mkdir ~/.janus
-git clone https://github.com/fatih/vim-go.git ~/.janus/vim-go
-git clone https://github.com/kien/rainbow_parentheses.vim ~/.janus/rainbow_parentheses.vim
-git clone https://github.com/tpope/vim-surround ~/.janus/vim-surround
-git clone https://github.com/Raimondi/delimitMate ~/.janus/delimitMate
+bash ./bootstrap-util/install-vim-plugins.sh
 
 ### GUI
 
