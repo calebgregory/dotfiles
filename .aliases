@@ -5,6 +5,22 @@ alias chr="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrom
 alias go-cover="go test -coverprofile=coverage.out && go tool cover -html=coverage.out && rm coverage.out"
 alias v="mvim ."
 # alias scheme=/Applications/MIT-Scheme.app/Contents/Resources/mit-scheme
+alias t=tmux
+alias gbc="git branch | cat | grep '*' | cut -d ' ' -f 2"
+alias jt="gbc | cut -d "/" -f2 | cut -d "-" -f1,2"
+
+alias cx="open https://calendar.google.com/calendar/b/3/r"
+alias ca="open https://calendar.google.com/calendar/b/0/r"
+alias hours="~/code/calendar/cli"
 
 alias docker-start="sudo systemctl start docker"
 alias docker-test="sudo docker run hello-world"
+
+alias ra="$HOME/code/xoi/VisionNxMobile/node_modules/.bin/react-native run-android --variant localDebug --appIdSuffix local"
+alias xa="less $XOI_HOME/xoi-aws-dev.txt"
+alias xaa="sed '3q;d' $XOI_HOME/xoi-aws-dev.txt | pbcopy"
+alias xap="sed '5q;d' $XOI_HOME/xoi-aws-dev.txt | pbcopy"
+alias xuu="sed '1q;d' $XOI_HOME/xoi-bootstrap-user | pbcopy"
+alias xup="sed '2q;d' $XOI_HOME/xoi-bootstrap-user | pbcopy"
+alias xbu="sed '1q;d' $XOI_HOME/xoi-bootstrap-superuser | pbcopy"
+alias xbp="sed '2q;d' $XOI_HOME/xoi-bootstrap-superuser | pbcopy"

@@ -1,2 +1,6 @@
 random-string() { cat /dev/urandom | env LC_CTYPE=C tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1 }
 docker-compose-restart() { docker-compose stop "$1"; docker-compose start "$1"; }
+gu() {
+  BRANCH=`gbc`
+  git pull origin "$BRANCH"
+}
