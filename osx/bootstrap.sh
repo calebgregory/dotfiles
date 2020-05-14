@@ -4,10 +4,7 @@ mkdir ~/tmp
 cd ~/tmp
 
 # [install homebrew](https://brew.sh/)
-curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | bash
-
-# install python, use miniconda to manage python versions
-curl -o- "https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh" | bash
+# curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | bash
 
 utils=(
   git
@@ -18,9 +15,9 @@ utils=(
   gvim
   vim
   ruby
-  macvim
 
   # other utils
+  wget
   jq
   tmux
   the_silver_searcher # [](https://github.com/ggreer/the_silver_searcher)
@@ -28,6 +25,13 @@ utils=(
 for u in $utils; do
   brew install "$u"
 done
+
+# [install python, use miniconda to manage python versions](https://docs.conda.io/en/latest/miniconda.html)
+# [installation instructions](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html)
+# echo "!!! Answer no to question about running 'conda init' !!!"
+# wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
+# bash ~/miniconda.sh -p $HOME/miniconda
+# source ~/miniconda/bin/activate; conda init zsh
 
 # [install nodejs using nvm](https://github.com/nvm-sh/nvm)
 NVM_VERSION="0.35.3"
@@ -39,6 +43,7 @@ sudo installer -pkg AWSCLIV2.pkg -target /
 
 # [install macvim](https://github.com/carlhuda/janus)
 sudo gem install rake # [](https://github.com/carlhuda/janus#pre-requisites)
+brew install macvim # needs to be installed AFTER python
 curl -L https://bit.ly/janus-bootstrap | bash
 
 # install [zsh with oh-my-zsh framework](https://github.com/robbyrussell/oh-my-zsh)
