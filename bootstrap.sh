@@ -28,6 +28,9 @@ GO_ARCHIVE="go$GO_VERSION.$OS-$ARCH.tar.gz"
 wget "https://dl.google.com/go/$GO_ARCHIVE"
 sudo tar -C /usr/local -xzf "$GO_ARCHIVE"
 
+# [make go workspace](https://golang.org/doc/code.html#Workspaces)
+mkdir -p ~/code/go
+
 # [install nodejs using nvm](https://github.com/creationix/nvm#install-script)
 #   must
 #     nvm install <version>
@@ -95,6 +98,7 @@ mv ./vagrant /usr/local/bin
 sudo dnf install -y ack
 sudo dnf install -y ctags
 sudo dnf install -y gvim
+sudo dnf install -y vim
 sudo dnf install -y ruby
 sudo gem install rake
 curl -L https://bit.ly/janus-bootstrap | bash
@@ -111,7 +115,8 @@ sudo dnf install -y the_silver_searcher
 
 ### nifty tools
 
-sudo dnf install -y feh
+sudo dnf install -y feh # image displayer
+sudo dnf install -y xclip # command line clipboard grabber
 
 ### download dotfiles
 
@@ -122,6 +127,19 @@ git clone https://github.com/calebgregory/dotfiles ~/.dotfiles
 cd $HOME
 rm ~/.zshrc # has to be removed for symlink
 ln -s ~/.dotfiles/.{aliases,exports,functions,gitconfig,gvimrc.after,path,tmux.conf,vimrc.after,zshrc} ~
+
+### install vim plugins
+
+mkdir ~/.janus
+git clone https://github.com/fatih/vim-go.git ~/.janus/vim-go
+git clone https://github.com/kien/rainbow_parentheses.vim ~/.janus/rainbow_parentheses.vim
+git clone https://github.com/tpope/vim-surround ~/.janus/vim-surround
+git clone https://github.com/Raimondi/delimitMate ~/.janus/delimitMate
+
+### GUI
+
+gsettings set org.gnome.desktop.background picture-uri ~/.dotfiles/assets/sea_drawing.jpg
+gsettings set org.gnome.desktop.screensaver picture-uri ~/.dotfiles/assets/sea_drawing.jpg
 
 ### clean up
 
