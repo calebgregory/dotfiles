@@ -1,6 +1,21 @@
-random-string() { cat /dev/urandom | env LC_CTYPE=C tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1 }
+#!/bin/bash
+
 docker-compose-restart() { docker-compose stop "$1"; docker-compose start "$1"; }
 gu() {
-  BRANCH=`gbc`
+  BRANCH="$(git branch --show-current)"
   git pull origin "$BRANCH"
+}
+
+todo() {
+  item="$1"
+
+  if [ -z $item ]; then
+    read item
+  fi
+
+  echo "$item" >> ~/Desktop/todos/todos
+}
+
+todos() {
+  vi ~/Desktop/todos/todos
 }

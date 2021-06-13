@@ -1,8 +1,11 @@
+#!/bin/bash
+
 export GOPATH="$HOME/code/go"
 export NVM_DIR="/Users/calebgregory/.nvm"
 export MAGICK_HOME="$HOME/ImageMagick-7.0.8"
 export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
-export XOI_HOME="$HOME/code/xoi/.creds"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
