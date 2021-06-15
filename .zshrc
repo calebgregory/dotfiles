@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/calebgregory/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -58,12 +58,14 @@ plugins=(git wd docker)
 # Load the shell dotfiles
 # ~/.path is for extending path
 # ~/.extra is for extra configuration outside of source control
-for file in ~/.{exports,path,aliases,functions,extra}; do
+for file in ~/.{exports,secrets,path,aliases,functions,extra}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done
 
 # This loads nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source $ZSH/oh-my-zsh.sh
 # source /sw/bin/init.sh
@@ -103,3 +105,6 @@ source $ZSH/oh-my-zsh.sh
 
 # set up rbenv for ruby version management
 eval "$(rbenv init -)"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi

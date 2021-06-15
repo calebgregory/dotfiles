@@ -21,6 +21,7 @@ utils=(
   jq
   tmux
   the_silver_searcher # [](https://github.com/ggreer/the_silver_searcher)
+  tree
 )
 for u in $utils; do
   brew install "$u"

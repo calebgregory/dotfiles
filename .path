@@ -1,2 +1,2 @@
 # miniconda: python version manager used at XOi: $HOME/miniconda3/bin:
-export PATH="$HOME/miniconda3/bin:$HOME/.local/bin:$HOME/Library/Android/sdk/platform-tools:$HOME/Library/Android/sdk/tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/opts/bin:/usr/local/go/bin:$GOPATH:$GOPATH/bin:$MAGICK_HOME/bin"
+export PATH="$HOME/miniconda/bin:$HOME/.local/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/opts/bin:/usr/local/go/bin:$GOPATH:$GOPATH/bin:$MAGICK_HOME/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$HOME/.dotfiles/bin"

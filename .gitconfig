@@ -1,6 +1,7 @@
 [core]
 	editor = /usr/bin/vim
 	excludesfile = /Users/calebgregory/.gitignore_global
+	symlinks = true
 [user]
 	email = calebgregory@gmail.com
 	name = Caleb Gregory
@@ -9,3 +10,5 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[credential]
+	helper = store --file ~/.git-credentials
