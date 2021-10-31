@@ -17,3 +17,11 @@ todo() {
 todos() {
   vi ~/Desktop/todos/todos
 }
+
+norelease() {
+  cat <<'EOM' | pbcopy
+```
+<!--@releases--><!--@norelease--><!--/@releases-->
+```
+EOM
+}
