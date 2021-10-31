@@ -3,6 +3,7 @@
 alias docs="cd ~/Documents"
 alias dox="cd ~/Documents/xoi"
 alias xoi="cd ~/workspace"
+alias demos="cd ~/Music/Demos"
 
 todo_dir='~/todo'
 alias td="vi $todo_dir/todo.wofl"

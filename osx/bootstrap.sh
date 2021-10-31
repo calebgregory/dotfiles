@@ -34,6 +34,11 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~
 bash ~/miniconda.sh -p $HOME/miniconda
 source ~/miniconda/bin/activate; conda init zsh
 
+# [install lein for clj things](https://leiningen.org/#install), adding it to path and making it executable
+curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o ~/.local/bin/lein
+chmod 744 ~/.local/bin/lein
+lein
+
 # [install nodejs using nvm](https://github.com/nvm-sh/nvm)
 NVM_VERSION="0.35.3"
 curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/v$NVM_VERSION/install.sh" | bash
