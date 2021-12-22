@@ -16,6 +16,11 @@ utils=(
   vim
   ruby
 
+  # for python version management
+  pyenv
+  # for ruby version management
+  rbenv
+
   # other utils
   wget
   jq
@@ -27,12 +32,12 @@ for u in $utils; do
   brew install "$u"
 done
 
-# [install python, use miniconda to manage python versions](https://docs.conda.io/en/latest/miniconda.html)
-# [installation instructions](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html)
-echo "!!! Answer no to question about running 'conda init' !!!"
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
-bash ~/miniconda.sh -p $HOME/miniconda
-source ~/miniconda/bin/activate; conda init zsh
+# setup python
+eval "$(pyenv init --path)"
+pyenv install 3.7.8
+pyenv global 3.7.8
+echo "installed python; current version = $(python -V)"
+pip install pipenv pre-commit boto3 warrant pytest stacker
 
 # [install nodejs using nvm](https://github.com/nvm-sh/nvm)
 NVM_VERSION="0.35.3"
@@ -41,6 +46,11 @@ curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/v$NVM_VERSION/install.sh"
 # [install aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-mac.html#cliv2-mac-install-cmd-all-users)
 curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
 sudo installer -pkg AWSCLIV2.pkg -target /
+
+# setup ruby
+eval "$(rbenv init -)"
+rbenv install 2.7.5
+rbenv global 2.7.5
 
 # [install macvim](https://github.com/carlhuda/janus)
 sudo gem install rake # [](https://github.com/carlhuda/janus#pre-requisites)

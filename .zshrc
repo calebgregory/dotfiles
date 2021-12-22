@@ -96,16 +96,17 @@ source $ZSH/oh-my-zsh.sh
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/calebgregory/.nvm/versions/node/v10.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/calebgregory/.nvm/versions/node/v10.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+[[ -f $HOME/.nvm/versions/node/v10.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/caleb/.nvm/versions/node/v10.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/calebgregory/.nvm/versions/node/v10.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/calebgregory/.nvm/versions/node/v10.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+[[ -f $HOME/.nvm/versions/node/v10.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/caleb/.nvm/versions/node/v10.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/calebgregory/code/xoi/infrastructure/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/calebgregory/code/xoi/infrastructure/node_modules/tabtab/.completions/slss.zsh
+[[ -f $HOME/code/xoi/infrastructure/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/caleb/code/xoi/infrastructure/node_modules/tabtab/.completions/slss.zsh
 
-# set up rbenv for ruby version management
+# setup rbenv for ruby version management
 eval "$(rbenv init -)"
+# setup pyenv for python version management
 if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
+  eval "$(pyenv init --path)"
 fi

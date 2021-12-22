@@ -13,7 +13,7 @@ filetype plugin indent on
 let g:jsx_ext_required = 0
 
 function Flow()
-  so /Users/calebgregory/.janus/vim-javascript/extras/flow.vim
+  so /Users/caleb/.janus/vim-javascript/extras/flow.vim
 endfunction
 
 " for https://github.com/dense-analysis/ale

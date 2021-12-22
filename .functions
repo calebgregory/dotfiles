@@ -11,11 +11,11 @@ todo() {
     read item
   fi
 
-  echo "$item" >> ~/Desktop/todos/todos
+  echo "$item" >> ~/todo/staging
 }
 
 todos() {
-  vi ~/Desktop/todos/todos
+  vi ~/todo
 }
 
 norelease() {
