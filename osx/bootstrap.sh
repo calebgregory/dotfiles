@@ -14,7 +14,7 @@ utils=(
   ctags
   gvim
   vim
-  ruby
+  rbenv
 
   # for python version management
   pyenv
@@ -38,6 +38,11 @@ pyenv install 3.7.8
 pyenv global 3.7.8
 echo "installed python; current version = $(python -V)"
 pip install pipenv pre-commit boto3 warrant pytest stacker
+
+# [install lein for clj things](https://leiningen.org/#install), adding it to path and making it executable
+curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o ~/.local/bin/lein
+chmod 744 ~/.local/bin/lein
+lein
 
 # [install nodejs using nvm](https://github.com/nvm-sh/nvm)
 NVM_VERSION="0.35.3"
