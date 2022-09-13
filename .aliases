@@ -7,6 +7,7 @@ alias demos="cd ~/Music/Demos"
 
 todo_dir='~/todo'
 alias td="vi $todo_dir/todo.wofl"
+alias tdp="cat $todo_dir/todo.wofl"
 alias tds="vi $todo_dir"
 alias tdc="$todo_dir/push"
 alias tdp="$todo_dir/pull"
@@ -20,6 +21,8 @@ alias cx="open https://calendar.google.com/calendar/b/3/r"
 alias ca="open https://calendar.google.com/calendar/b/0/r"
 alias hours="~/code/calendar/cli"
 
+alias timer="~/tools/timer.py"
+
 alias v="mvim ."
 alias edd='emacs --daemon'  # start emacs server in background
 alias e='emacsclient -t'  # open emacs in terminal
@@ -32,9 +35,15 @@ alias gbc="git branch --show-current"
 alias gu="gbc | xargs git pull origin"
 alias gpc="gbc | xargs git push origin"
 alias jt="gbc | cut -d '/' -f2 | cut -d '-' -f1,2"
+function ggco() {
+  branch_name="$1"
+  git fetch origin "$branch_name"
+  git checkout "$branch_name"
+}
+alias gbcp="gbc | tr -d '\n' | pbcopy"
 
 alias docker-start="sudo systemctl start docker"
 alias docker-test="sudo docker run hello-world"
 
-alias ra="~/xoi/VisionNxMobile/node_modules/.bin/react-native run-android --variant localDebug --appIdSuffix local"
+alias ra="/Volumes/Workspace/VisionNxMobile/node_modules/.bin/react-native run-android --variant localDebug --appIdSuffix local"
 

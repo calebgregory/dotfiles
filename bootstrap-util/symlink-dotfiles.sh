@@ -4,4 +4,4 @@
 
 cd $HOME
 rm ~/.zshrc # has to be removed for symlink
-ln -s ~/.dotfiles/.{aliases,emacs.d,exports,functions,gitconfig,git-credentials,gvimrc.after,path,tmux.conf,vimrc.after,zshrc} ~
+ln -s ~/.dotfiles/.{aliases,emacs.d,exports,extra,functions,gitconfig,git-credentials,gvimrc.after,path,tmux.conf,gitmux.conf,vimrc.after,zshrc} ~
