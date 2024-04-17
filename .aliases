@@ -22,6 +22,10 @@ alias ca="open https://calendar.google.com/calendar/b/0/r"
 alias hours="~/code/calendar/cli"
 
 alias timer="~/tools/timer.py"
+function notify() {
+  # useful for getting a notification when a long-running process is done
+  osascript -e 'display notification "Done doing that ✅" with title "Done!" sound name "Bonk"'
+}
 
 alias v="mvim ."
 alias edd='emacs --daemon'  # start emacs server in background
@@ -46,4 +50,4 @@ alias docker-start="sudo systemctl start docker"
 alias docker-test="sudo docker run hello-world"
 
 alias ra="/Volumes/Workspace/VisionNxMobile/node_modules/.bin/react-native run-android --variant localDebug --appIdSuffix local"
-
+alias now="node -e 'process.stdout.write(new Date().toISOString())'"

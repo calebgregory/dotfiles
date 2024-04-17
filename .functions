@@ -15,7 +15,7 @@ todo() {
 }
 
 todos() {
-  vi ~/todo
+  vi ~/todo/todo.wofl
 }
 
 norelease() {
