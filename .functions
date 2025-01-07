@@ -2,12 +2,12 @@
 
 docker-compose-restart() { docker-compose stop "$1"; docker-compose start "$1"; }
 
-ee() { /Applications/Emacs.app/Contents/MacOS/Emacs "$@" }
+ee() { /Applications/Emacs.app/Contents/MacOS/Emacs "$@"; }
 
 todo() {
   item="$1"
 
-  if [ -z $item ]; then
+  if [ -z "$item" ]; then
     read item
   fi
 
@@ -24,4 +24,9 @@ norelease() {
 <!--@releases--><!--@norelease--><!--/@releases-->
 ```
 EOM
+}
+
+wo() {
+  open ~/_/main/working_out/physical_therapy/2024.07.24.pdf
+  vi ~/_/main/working_out/physical_therapy/2024.07.24.notes.md
 }

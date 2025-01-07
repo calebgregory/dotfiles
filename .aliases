@@ -1,8 +1,6 @@
 #!/bin/bash
 
 alias docs="cd ~/Documents"
-alias dox="cd ~/Documents/xoi"
-alias xoi="cd ~/workspace"
 alias demos="cd ~/Music/Demos"
 
 todo_dir='~/todo'
@@ -11,6 +9,8 @@ alias tdp="cat $todo_dir/todo.wofl"
 alias tds="vi $todo_dir"
 alias tdc="$todo_dir/push"
 alias tdp="$todo_dir/pull"
+
+alias slackmd="~/.dotfiles/tools/copy_for_pasting_in_slack.py"
 
 alias go-cover="go test -coverprofile=coverage.out && go tool cover -html=coverage.out && rm coverage.out"
 # alias scheme=/Applications/MIT-Scheme.app/Contents/Resources/mit-scheme
@@ -49,5 +49,10 @@ alias gbcp="gbc | tr -d '\n' | pbcopy"
 alias docker-start="sudo systemctl start docker"
 alias docker-test="sudo docker run hello-world"
 
-alias ra="/Volumes/Workspace/VisionNxMobile/node_modules/.bin/react-native run-android --variant localDebug --appIdSuffix local"
 alias now="node -e 'process.stdout.write(new Date().toISOString())'"
+
+alias main="code ~/_/main"
+
+# conversions
+
+alias mm="python ~/.dotfiles/tools/convert_inches_to_mm.py"

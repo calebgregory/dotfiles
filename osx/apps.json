@@ -11,6 +11,6 @@
   {"name": "Slack", "url": "https://slack.com/ssb/download-osx"},
   {"name": "Spotify", "url": "https://www.spotify.com/download/mac/"},
   {"name": "Xcode", "url": "https://apps.apple.com/us/app/xcode/id497799835?mt=12"},
-  {"name": "Android Studio", "url": "https://redirector.gvt1.com/edgedl/android/studio/install/3.6.3.0/android-studio-ide-192.6392135-mac.dmg"},
-  {"name": "iTerm2", "url": "https://iterm2.com/downloads/stable/iTerm2-3_3_9.zip"}
+  {"name": "iTerm2", "url": "https://iterm2.com/downloads/stable/iTerm2-3_3_9.zip"},
+  {"name": "balenaEtcher.app", "url": "https://github.com/balena-io/etcher/releases/download/v1.19.25/balenaEtcher-1.19.25-arm64.dmg"},
 ]

@@ -1,7 +1,7 @@
-#!/usr/bin bash
+#!/usr/bin/bash
 
 mkdir ~/tmp
-cd ~/tmp
+cd ~/tmp || exit
 
 # [install homebrew](https://brew.sh/)
 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | bash
@@ -28,16 +28,16 @@ utils=(
   the_silver_searcher # [](https://github.com/ggreer/the_silver_searcher)
   tree
 )
-for u in $utils; do
+for u in "${utils[@]}"; do
   brew install "$u"
 done
 
 # setup python
 eval "$(pyenv init --path)"
-pyenv install 3.7.8
-pyenv global 3.7.8
+pyenv install 3.12.2
+pyenv global 3.12.2
 echo "installed python; current version = $(python -V)"
-pip install pipenv pre-commit boto3 warrant pytest stacker
+pip install poetry pre-commit boto3 warrant pytest stacker
 
 # [install lein for clj things](https://leiningen.org/#install), adding it to path and making it executable
 curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o ~/.local/bin/lein
@@ -45,7 +45,7 @@ chmod 744 ~/.local/bin/lein
 lein
 
 # [install nodejs using nvm](https://github.com/nvm-sh/nvm)
-NVM_VERSION="0.35.3"
+NVM_VERSION="0.40.1"
 curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/v$NVM_VERSION/install.sh" | bash
 
 # [install aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-mac.html#cliv2-mac-install-cmd-all-users)
@@ -69,7 +69,8 @@ curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools
 # [clone this repository]()
 git clone git@github.com:calebgregory/dotfiles.git ~/.dotfiles
 
-cd ~/.dotfiles
+cd ~/.dotfiles || exit 1
+touch .extra .secrets
 bash ./bootstrap-util/symlink-dotfiles.sh
 
 # clean up
