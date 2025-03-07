@@ -23,6 +23,7 @@ files_to_symlink=(
   .vimrc.after
   .zshrc
   mise.toml
+  dotfiles-of-peter/.wezterm.lua
 )
 for file in "${files_to_symlink[@]}"; do
   ln -s ~/.dotfiles/"${file}" ~
