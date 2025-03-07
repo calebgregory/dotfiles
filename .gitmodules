@@ -1,3 +1,6 @@
 [submodule ".emacs.d"]
 	path = .emacs.d
 	url = git@github.com:calebgregory/config.emacs.d.git
+[submodule "dotfiles-of-peter"]
+	path = dotfiles-of-peter
+	url = git@github.com:calebgregory/dotfiles-of-peter.git
