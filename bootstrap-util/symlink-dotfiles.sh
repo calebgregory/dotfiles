@@ -22,6 +22,7 @@ files_to_symlink=(
   .tmux.conf
   .vimrc.after
   .zshrc
+  mise.toml
 )
 for file in "${files_to_symlink[@]}"; do
   ln -s ~/.dotfiles/"${file}" ~
