@@ -4,8 +4,8 @@ alias docs="cd ~/Documents"
 alias demos="cd ~/Music/Demos"
 
 todo_dir='~/todo'
-alias td="vi $todo_dir/todo.wofl"
-alias tdp="cat $todo_dir/todo.wofl"
+alias td="vi $todo_dir/todo.md"
+alias tdp="cat $todo_dir/todo.md"
 alias tds="vi $todo_dir"
 alias tdc="$todo_dir/push"
 alias tdp="$todo_dir/pull"

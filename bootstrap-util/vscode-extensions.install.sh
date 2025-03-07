@@ -2,4 +2,5 @@
 
 while read -r line; do
   code --install-extension "$line"
-done < ~/.dotfiles/vscode-extensions.txt
+done < ~/.dotfiles/bootstrap-util/vscode-extensions.txt
+

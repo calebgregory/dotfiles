@@ -14,6 +14,7 @@ files_to_symlink=(
   .functions
   .git-credentials
   .gitconfig
+  .gitignore_global
   .gitmux.conf
   .gvimrc.after
   .path

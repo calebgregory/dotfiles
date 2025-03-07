@@ -52,7 +52,7 @@ export PS1="(>'')>"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git wd docker yarn poetry zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git wd docker yarn poetry zsh-syntax-highlighting zsh-autosuggestions mise uv)
 
 # User configuration
 
@@ -92,35 +92,5 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f $HOME/.nvm/versions/node/v10.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/caleb/.nvm/versions/node/v10.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f $HOME/.nvm/versions/node/v10.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/caleb/.nvm/versions/node/v10.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f $HOME/code/xoi/infrastructure/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/caleb/code/xoi/infrastructure/node_modules/tabtab/.completions/slss.zsh
-
-# Some of our Python dependencies do not yet provide prebuilt wheels for this
-# target and will therefore need to be compiled directly on your machine during
-# installation.
-#
-# Disclaimer: At the time of writing, this is a workaround for installing the
-# grpcio Python package. Setting LDFLAGS and CFLAGS globally may or may not
-# cause unintended side effects during compilation of other “things” relying on
-# OpenSSL.
-export GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=1
-export GRPC_PYTHON_BUILD_SYSTEM_ZLIB=1
-export LDFLAGS="-L$(brew --prefix openssl@3)/lib"
-export CFLAGS="-I$(brew --prefix openssl@3)/include"
-
-# setup rbenv for ruby version management
-eval "$(rbenv init -)"
-# setup pyenv for python version management
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init --path)"
-fi
+eval "$(mise activate zsh)"
 

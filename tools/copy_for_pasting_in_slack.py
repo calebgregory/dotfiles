@@ -11,6 +11,7 @@ to your clipboard so you can paste it into Slack.  UGGHHHHHHH :((((((."""
 
 import re
 import subprocess
+import sys
 import typing as ty
 
 LIST_RE = re.compile(r"^(\s*)(- |[0-9]\. )")
@@ -63,7 +64,7 @@ def _fmt_markdown_for_slack(md: str) -> str:
 
 
 def main():
-    input_ = _pbpaste()
+    input_ = _pbpaste() if sys.stdin.isatty() else sys.stdin.read()
     if not input_:
         print("nothing to reformat")
         return

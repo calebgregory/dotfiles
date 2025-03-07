@@ -1,6 +1,6 @@
 [core]
 	editor = /usr/bin/vim
-	excludesfile = /Users/caleb/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	symlinks = true
 [user]
 	email = calebgregory@gmail.com
