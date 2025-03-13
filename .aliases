@@ -56,3 +56,8 @@ alias main="code ~/_/main"
 # conversions
 
 alias mm="python ~/.dotfiles/tools/convert_inches_to_mm.py"
+
+# wezterm
+
+alias wezlogs="ls -t ~/.local/share/wezterm | head -n 1 | xargs tail"
+
