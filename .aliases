@@ -61,3 +61,4 @@ alias mm="python ~/.dotfiles/tools/convert_inches_to_mm.py"
 
 alias wezlogs="ls -t ~/.local/share/wezterm | head -n 1 | xargs tail"
 
+alias vv="uv run"

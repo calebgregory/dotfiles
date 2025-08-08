@@ -104,3 +104,11 @@ _uv_run_mod() {
 }
 compdef _uv_run_mod uv
 
+
+# pnpm
+export PNPM_HOME="/Users/caleb.gregory/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
