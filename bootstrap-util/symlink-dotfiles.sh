@@ -22,9 +22,10 @@ files_to_symlink=(
   .tmux.conf
   .vimrc.after
   .zshrc
-  mise.toml
   dotfiles-of-peter/.wezterm.lua
 )
 for file in "${files_to_symlink[@]}"; do
   ln -s ~/.dotfiles/"${file}" ~
 done
+
+ln -s ~/.dotfiles/mise.toml ~/.config/mise/config.toml
