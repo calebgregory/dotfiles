@@ -11,15 +11,10 @@ local PHASES = {
   { name = "Focus", emoji = "🍅", paused_emoji = "🥀", seconds = 25 * 60 },
   { name = "Break", emoji = "🥦", paused_emoji = "🪴", seconds = 5 * 60 },
 }
-local STARTPAUSE_MODS = {"ctrl","alt","cmd"}
-local STARTPAUSE_KEY  = "P"
-local ADVANCE_MODS    = {"ctrl","alt","cmd","shift"}
-local ADVANCE_KEY     = "P"
 
 -- Sounds: try "Glass", "Pop", "Tink", "Submarine", "Funk", "Hero"
 local START_SOUND_NAME = "Pop"
 local PAUSE_SOUND_NAME = "Tink"
-
 
 -- === State ===
 local idx = 1                       -- current phase index (1..#PHASES)
@@ -69,7 +64,6 @@ local function advanceToNextPhasePaused()
   deadline = nil
   stopTick()
   setMenu()
-  -- No sound on advance per your request
 end
 
 local function startTick()
@@ -118,5 +112,5 @@ end
 setMenu()
 
 -- Hotkeys
-hs.hotkey.bind(STARTPAUSE_MODS, STARTPAUSE_KEY, toggleStartPause)
-hs.hotkey.bind(ADVANCE_MODS, ADVANCE_KEY, advanceToNextPhasePaused)
+hs.hotkey.bind({"ctrl","alt","cmd"}, "P", toggleStartPause)
+hs.hotkey.bind({"ctrl","alt","cmd","shift"}, "P", advanceToNextPhasePaused)
