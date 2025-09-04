@@ -8,8 +8,8 @@
 
 -- === Config ===
 local PHASES = {
-  { name = "Focus", emoji = "🍅", paused_emoji = "🥀", seconds = 2 }, -- 25 * 60 },
-  { name = "Break", emoji = "🥦", paused_emoji = "🪴", seconds = 2 },-- 5 * 60 },
+  { name = "Focus", emoji = "🍅", paused_emoji = "🥀", seconds = 25 * 60 },
+  { name = "Break", emoji = "🥦", paused_emoji = "🪴", seconds = 5 * 60 },
 }
 local STARTPAUSE_MODS = {"ctrl","alt","cmd"}
 local STARTPAUSE_KEY  = "P"
