@@ -4,9 +4,9 @@
 ----------------------------------------------------------------
 
 -- === Settings ===
-local UNLOCK_MODS = {"ctrl","alt","cmd","shift"}
+local UNLOCK_MODS = {"ctrl","alt","cmd"}
 local UNLOCK_KEY  = "L"
-local AUTO_UNLOCK_MINUTES = 30
+local AUTO_UNLOCK_MINUTES = 45
 
 -- System sounds: try "Submarine", "Glass", "Pop", "Tink", "Funk", "Hero"
 local LOCK_SOUND_NAME   = "Funk"
@@ -54,13 +54,29 @@ local mediaTap = hs.eventtap.new({hs.eventtap.event.types.systemDefined}, functi
 end)
 
 -- --- Helpers ---
+
+-- Build a normalized key for a list of modifier names
+local function listKey(t)
+  local copy = {table.unpack(t)}
+  table.sort(copy)
+  return table.concat(copy, "+")
+end
+
+-- Build a normalized key from hs event flags (only the ones that are true)
+local function flagsKey(flags)
+  local t = {}
+  for k,v in pairs(flags) do if v then t[#t+1] = k end end
+  table.sort(t)
+  return table.concat(t, "+")
+end
+
+-- Precompute the target modifiers once
+local UNLOCK_MODS_KEY = listKey(UNLOCK_MODS)
+
 local function isUnlockEvent(e)
-  if e:getType() ~= hs.eventtap.event.types.keyDown then return false end
-  local mods = e:getFlags()
-  local need = {ctrl=true, alt=true, cmd=true, shift=true}
-  for k,_ in pairs(need) do if not mods[k] then return false end end
-  for k,v in pairs(mods) do if v and not need[k] then return false end end
-  return hs.keycodes.map[UNLOCK_KEY:lower()] == e:getKeyCode()
+  return e:getType() == hs.eventtap.event.types.keyDown
+     and flagsKey(e:getFlags()) == UNLOCK_MODS_KEY
+     and hs.keycodes.map[UNLOCK_KEY:lower()] == e:getKeyCode()
 end
 
 local function playSound(name)
@@ -69,11 +85,14 @@ local function playSound(name)
   if snd then snd:play() end
 end
 
-local function fmtMMSS(secs)
+local function fmtTimer(secs)
   secs = math.max(0, math.floor(secs))
   local m = math.floor(secs / 60)
+  if m >= 1 then
+    return string.format("%02dm", m)
+  end
   local s = secs % 60
-  return string.format("%d:%02d", m, s)
+  return string.format("%02ds", s)
 end
 
 local function remainingSeconds()
@@ -84,7 +103,7 @@ end
 local function setMenuLocked(isLocked)
   if not menu then return end
   if isLocked then
-    local ttl = fmtMMSS(remainingSeconds())
+    local ttl = fmtTimer(remainingSeconds())
     menu:setTitle(EMOJI_LOCKED .. " " .. ttl)
     menu:setTooltip("Input Locked — " .. ttl .. " remaining (click to unlock)")
   else

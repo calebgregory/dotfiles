@@ -47,7 +47,7 @@ local function setMenu()
     menu:setTooltip(string.format("%s — %s remaining (running). Click to pause.", phase.name, timeText))
   else
     -- Paused/stopped: show paused prefix + phase emoji + remaining
-    menu:setTitle(string.format("%s %s", phase.paused_emoji, timeText))
+    menu:setTitle(string.format("%s", phase.paused_emoji))
     menu:setTooltip(string.format("%s — %s remaining (paused). Click to start.", phase.name, timeText))
   end
 end
