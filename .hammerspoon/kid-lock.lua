@@ -20,7 +20,8 @@ local tickTimer     = nil     -- countdown refresher (every second)
 local lockDeadline  = nil     -- os.time() when it should auto-unlock
 local menu          = hs.menubar.new(true)
 
-local EMOJI_LOCKED, EMOJI_UNLOCKED = "🔒", "🔓"
+local EMOJI_LOCKED, EMOJI_UNLOCKED = "👶", "🫵"
+
 
 -- Blocked events (mouse move & clicks NOT tapped, so they still work)
 local blockedEventTypes = {
