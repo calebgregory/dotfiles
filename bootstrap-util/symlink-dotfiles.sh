@@ -8,6 +8,7 @@ rm ~/.zshrc # has to be removed for symlink
 
 files_to_symlink=(
   .aliases
+  .default-python-packages
   .emacs.d
   .exports
   .extra
