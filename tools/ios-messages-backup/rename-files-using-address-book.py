@@ -1,3 +1,4 @@
+#!/usr/bin/env -S uv run python
 import os
 import sqlite3
 from pathlib import Path
@@ -76,10 +77,11 @@ def _rename_exports(
         new_base = ", ".join(new_parts)
         new_file = html_file.with_name(new_base + f".{ext}")
 
-        if new_file != html_file:
-            print(f"Renaming: {html_file.name} -> {new_file.name}")
-            if not dry_run:
-                os.rename(html_file, new_file)
+        if new_file == html_file:
+            continue
+        print(f"Renaming: {html_file.name} -> {new_file.name}")
+        if not dry_run:
+            os.rename(html_file, new_file)
 
 
 def main(backup_root: Path, export_dir: Path, ext: str, apply: bool = False) -> None:
