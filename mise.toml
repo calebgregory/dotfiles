@@ -3,6 +3,7 @@ node = "24"
 python = ["3.13", "3.12", "3.10", "3.9", "3.8"]
 gh = ["2"]
 uv = "0.6.3"
+usage = "2"
 
 postgres = "17"
 # https://github.com/mise-plugins/mise-postgres
