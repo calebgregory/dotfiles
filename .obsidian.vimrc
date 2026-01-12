@@ -1,5 +1,8 @@
 imap jj <Esc>
 
+" Yank to system clipboard
+set clipboard=unnamed
+
 exmap surround_double_quotes surround " "
 exmap surround_single_quotes surround ' '
 exmap surround_backticks surround ` `
@@ -7,7 +10,6 @@ exmap surround_brackets surround ( )
 exmap surround_square_brackets surround [ ]
 exmap surround_curly_brackets surround { }
 
-" NOTE: must use 'map' and not 'nmap'
 nunmap s
 nmap siw" :surround_double_quotes<CR>
 nmap siw' :surround_single_quotes<CR>
