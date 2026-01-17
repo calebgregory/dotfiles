@@ -31,6 +31,25 @@ wo() {
   vi ~/_/main/working_out/physical_therapy/2024.07.24.notes.md
 }
 
+function cc() {
+  # https://github.com/calebgregory/confident-confidant
+  known_locations=("$HOME/code/confident-confidant" "$HOME/work/confident-confidant")
+  script=""
+  for known in "${known_locations[@]}"; do
+    if [ -d "$known" ]; then
+      script="${known}/cc.py"
+      break
+    fi
+  done
+
+  if [ -z "$script" ]; then
+    echo "Could not find confident-confidant clone :("
+    exit 1
+  fi
+
+  "$script" "$@"
+}
+
 #
 # thanks to Matt Hawthorne for these brilliant utilities
 #

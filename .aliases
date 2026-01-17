@@ -10,6 +10,7 @@ alias tds="vi $todo_dir"
 alias tdc="$todo_dir/push"
 alias tdp="$todo_dir/pull"
 
+# https://github.com/calebgregory/tools
 alias slackmd="~/tools/copy_for_pasting_in_slack.py"
 
 alias go-cover="go test -coverprofile=coverage.out && go tool cover -html=coverage.out && rm coverage.out"
