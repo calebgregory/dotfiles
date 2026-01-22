@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ln -s ~/.dotfiles/.claude/settings.json ~/.claude/settings.json
