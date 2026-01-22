@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# ~/.claude/statusline.py
 """Claude Code statusline command - displays contextual info in the terminal."""
 
 import json
