@@ -4,6 +4,8 @@
 
 - Do not write redundant or extraneous docstrings.  A docstring should not contain a restatement of the function signature.  If there is additional context or history that's important to know about the function, its intended use, or its limitations/constraints, include that.  But don't simply restate what the function signature already says.  Apply that energy into making sure your function signature is descriptive and semantically informative while remaining concise.
 
+- Do not write comments that are a restatement of a function call or a log statement.
+
 ## Reduce visual clutter
 
 - Prefer building complex data inline declaratively over imperatively extending.  Example:
