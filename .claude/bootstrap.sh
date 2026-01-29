@@ -6,6 +6,7 @@ target_dir="$HOME/.claude"
 files=(
   'settings.json'
   'CLAUDE.md'
+  'rules'
 )
 
 for file in "${files[@]}"; do
