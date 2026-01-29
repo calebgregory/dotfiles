@@ -32,6 +32,8 @@ lines.append("Body:")
 lines.extend(_body_content())
 ```
 
+- Obviously, there are cases where you cannot avoid imperatively extending a complex data instance, for example, when you are conditionally building a data-instance in a for-loop.  Follow python idioms here, but prefer the in-line style.
+
 ## Make encapsulation clear
 
 - Any function, type or constant that is not used outside of the module that defines it should be prefixed with a `_`.  This communicates to the reader that the function is not intended to be an externally-consumable API, which drastically affects how the reader will interpret the function's significance:  "is it _an externally-consumable API_, and therefore has a signature I am bound to in some way?  Or is it simply an internal implementation detail that can easily change?"
