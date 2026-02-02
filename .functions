@@ -31,25 +31,6 @@ wo() {
   vi ~/_/main/working_out/physical_therapy/2024.07.24.notes.md
 }
 
-function cc() {
-  # https://github.com/calebgregory/confident-confidant
-  known_locations=("$HOME/code/confident-confidant" "$HOME/work/confident-confidant")
-  script=""
-  for known in "${known_locations[@]}"; do
-    if [ -d "$known" ]; then
-      script="${known}/cc.py"
-      break
-    fi
-  done
-
-  if [ -z "$script" ]; then
-    echo "Could not find confident-confidant clone :("
-    exit 1
-  fi
-
-  "$script" "$@"
-}
-
 #
 # thanks to Matt Hawthorne for these brilliant utilities
 #
@@ -110,7 +91,7 @@ good-morning() {
   local prev_date=$(gdate -d "-${n_days} days" --iso-8601)
   gh-recent-prs -d "${n_days}" -f reviews \
     | jq -r '
-        (.reviews = ([.reviews[] | select(.author.login == "'$me'" and .submittedAt >= "'$prev_date'")] | sort_by(.submittedAt)))
+        (.reviews = ([.reviews[] | select(.author.login == "'"$me"'" and .submittedAt >= "'"$prev_date"'")] | sort_by(.submittedAt)))
         | select(.reviews | length > 0)
         | ([.reviews[] | select(.body != "") | "    \(.state): \(.body)"] | (if length == 0 then ["    ..."] else . end)) as $review_summaries |
         "\(.title)  #\(.number)  \(.state)  @\(.author.login) (\(.author.name)):\n\n\($review_summaries | join("\n\n"))\n\n"

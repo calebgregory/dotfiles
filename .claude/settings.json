@@ -1,4 +1,9 @@
 {
+  "model": "opus",
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": ["-", "\\", "|", "/"]
+  },
   "hooks": {
     "UserPromptSubmit": [
       {

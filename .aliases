@@ -12,6 +12,9 @@ alias tdp="$todo_dir/pull"
 
 # https://github.com/calebgregory/tools
 source ~/tools/aliases.sh
+alias tools="code ~/tools/.vscode/tools.code-workspace"
+alias dotfiles="code ~/.dotfiles"
+alias main="code ~/_/main"
 
 alias go-cover="go test -coverprofile=coverage.out && go tool cover -html=coverage.out && rm coverage.out"
 # alias scheme=/Applications/MIT-Scheme.app/Contents/Resources/mit-scheme
@@ -51,8 +54,6 @@ alias docker-start="sudo systemctl start docker"
 alias docker-test="sudo docker run hello-world"
 
 alias now="node -e 'process.stdout.write(new Date().toISOString())'"
-
-alias main="code ~/_/main"
 
 # wezterm
 
