@@ -30,3 +30,4 @@ for file in "${files_to_symlink[@]}"; do
 done
 
 ln -s ~/.dotfiles/mise.toml ~/.config/mise/config.toml
+ln -s ~/.dotfiles/lemonaid.toml ~/.config/lemonaid/config.toml
