@@ -1,0 +1,253 @@
+{
+  "terminal.external.osxExec": "iTerm2.app",
+  "workbench.panel.defaultLocation": "right",
+  "files.trimTrailingWhitespace": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  },
+  "vim.useSystemClipboard": true,
+  "editor.lineNumbers": "relative",
+  "editor.tabSize": 2,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"],
+    },
+    {
+      "before": ["<C-c>"],
+      "after": ["<Enter>"],
+    },
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<C-j>"],
+      "commands": ["editor.action.moveLinesDownAction"],
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["editor.action.moveLinesUpAction"],
+    },
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<C-j>"],
+      "commands": ["editor.action.moveLinesDownAction"],
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["editor.action.moveLinesUpAction"],
+    },
+  ],
+  "prettier.useEditorConfig": false,
+  "[python]": {
+    "breadcrumbs.showClasses": true,
+    "editor.tabSize": 4,
+  },
+  "elixirLS.projectDir": "chat_server",
+  "beautify.config": "",
+  "eslint.format.enable": true,
+  "php.validate.executablePath": "",
+  "liveshare.authenticationProvider": "GitHub",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb",
+  },
+  "plantuml.render": "PlantUMLServer",
+  "plantuml.server": "http://localhost:8888",
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.cursorStyle": "line",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "on",
+  "editor.detectIndentation": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.editor.openSideBySideDirection": "down",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  },
+  "git.autofetch": true,
+  "vim.easymotion": true,
+  "workbench.editor.enablePreview": false,
+  "workbench.colorTheme": "Gruvbox Dark (Medium)",
+  "todomd.activatePattern": "**/{z.notes.todo,todo}.md",
+  "githubPullRequests.pullBranch": "never",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+  },
+  "python.analysis.importFormat": "relative",
+  "workbench.colorCustomizations": {
+    // "diffEditor.removedTextBackground": "#7d062c",
+    // "diffEditor.insertedTextBackground": "#3d5c0a",
+    // "diffEditor.removedLineBackground": "#430017",
+    // "diffEditor.insertedLineBackground": "#243c04",
+    // "diffEditorOverview.insertedForeground": "#50c423", // "#192c00",
+    // "diffEditorOverview.removedForeground": "#d10a50" // "#450017",
+  },
+  "svg.preview.mode": "svg",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "yaml": false,
+    "python": false,
+  },
+  "editor.guides.bracketPairs": true,
+  "gitlens.views.branches.branches.layout": "list",
+  "todo.file.include": [
+    "**/TODO",
+    "**/TODOS",
+    "**/*.TODO",
+    "**/*.TODOS",
+    "**/*.todo",
+    "**/*.todos",
+    "**/*.task",
+    "**/*.tasks",
+    "**/*.taskpaper",
+    "**/todolist.txt",
+    "**/todo.md",
+  ],
+  // "github.copilot.inlineSuggest.enable": false,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["keyword.checkbox-todo"],
+        "settings": {
+          "foreground": "#ac2814e6",
+          "fontStyle": "bold",
+        },
+      },
+      {
+        "scope": ["keyword.event"],
+        "settings": {
+          "foreground": "#6E3500",
+          "fontStyle": "bold",
+        },
+      },
+      {
+        "scope": ["keyword.checkbox-malformed"],
+        "settings": {
+          "foreground": "#b041b0",
+          "fontStyle": "bold",
+        },
+      },
+      {
+        "scope": ["keyword.checkbox-right_now"],
+        "settings": {
+          "foreground": "#0f5ec4",
+          "fontStyle": "bold",
+        },
+      },
+      {
+        "scope": ["keyword.checkbox-next"],
+        "settings": {
+          "foreground": "#1e47cf",
+          "fontStyle": "bold",
+        },
+      },
+      {
+        "scope": ["keyword.checkbox-migrated"],
+        "settings": {
+          "foreground": "#7953c5",
+          "fontStyle": "bold",
+        },
+      },
+      {
+        "scope": ["keyword.checkbox-waiting"],
+        "settings": {
+          "foreground": "#FFA500",
+          "fontStyle": "bold",
+        },
+      },
+      {
+        "scope": ["keyword.checkbox-done"],
+        "settings": {
+          "foreground": "#3cbf09",
+          "fontStyle": "bold",
+        },
+      },
+      {
+        "scope": ["keyword.checkbox-strikethrough"],
+        "settings": {
+          "foreground": "#172017",
+          "fontStyle": "bold",
+        },
+      },
+      {
+        "scope": ["keyword.strikethrough-text"],
+        "settings": {
+          "fontStyle": "italic",
+          "foreground": "#00000070",
+        },
+      },
+      {
+        "scope": ["keyword.bullet"],
+        "settings": {
+          "fontStyle": "bold",
+        },
+      },
+    ],
+  },
+  "files.associations": {
+    "myLambda.sql": "rsql",
+  },
+  "cSpell.userWords": [
+    "abfss",
+    "ADLS",
+    "cpus",
+    "Datavant",
+    "Everly",
+    "fqns",
+    "incrementer",
+    "pyprojects",
+    "qurplemort",
+    "relpaths",
+    "thds",
+    "thunking",
+    "Trilliant",
+  ],
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+  },
+  "editor.fontVariations": false,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "editor.minimap.enabled": false,
+  "http.proxyStrictSSL": false,
+  "explorer.confirmDragAndDrop": false,
+
+  "python.analysis.nodeExecutable": "/Users/caleb.gregory/.local/share/mise/installs/node/20.19.0/bin/node",
+  "docker.extension.enableComposeLanguageServer": false,
+  "thds-mono-vsc.autoRun": true,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true,
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
+  "vim.visualModeKeyBindingsNonRecursive": [],
+  "claudeCode.preferredLocation": "sidebar",
+  "claudeCode.useTerminal": true,
+  "terminal.integrated.macOptionIsMeta": true,
+  "claudeCode.useCtrlEnterToSend": true,
+  // "ruff.configurationPreference": "filesystemFirst",
+  "csv.enabled": false,
+  "editor.formatOnSave": true
+}

@@ -17,4 +17,3 @@ pnpm = "10"
 'aqua:duckdb/duckdb' = "1.3"
 'pipx:xonsh[full]' = "0"
 aws-cli = "latest"
-
