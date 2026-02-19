@@ -112,3 +112,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# wt - Git worktree utilities
+[ -f ~/.gent/init.sh ] && source ~/.gent/init.sh

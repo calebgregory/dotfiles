@@ -9,6 +9,7 @@
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   },
   "vim.useSystemClipboard": true,
+  "vim.textwidth": 105,
   "editor.lineNumbers": "relative",
   "editor.tabSize": 2,
   "vim.insertModeKeyBindings": [
