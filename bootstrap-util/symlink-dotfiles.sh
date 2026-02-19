@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 ### symlink dotfiles (whitelist-style, to prevent accidents)
 
@@ -29,6 +29,7 @@ for file in "${files_to_symlink[@]}"; do
   ln -s ~/.dotfiles/"${file}" ~
 done
 
+ln -s ~/.dotfiles/dotfiles-of-peter/wezterm ~/.config
 ln -s ~/.dotfiles/mise.toml ~/.config/mise/config.toml
 ln -s ~/.dotfiles/lemonaid.toml ~/.config/lemonaid/config.toml
 
