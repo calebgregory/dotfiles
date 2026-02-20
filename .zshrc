@@ -52,9 +52,14 @@ export PS1="(>'')>"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git wd docker yarn poetry zsh-syntax-highlighting zsh-autosuggestions mise uv)
+plugins=(git wd docker yarn poetry zsh-syntax-highlighting zsh-autosuggestions mise uv timer)
 
 # User configuration
+
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/timer
+export TIMER_FORMAT='[%d]'
+export TIMER_THRESHOLD=5
+
 
 # Load the shell dotfiles
 # ~/.path is for extending path
