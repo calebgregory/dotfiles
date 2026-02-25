@@ -1,124 +1,14 @@
 {
-  "terminal.external.osxExec": "iTerm2.app",
-  "workbench.panel.defaultLocation": "right",
-  "files.trimTrailingWhitespace": true,
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-  },
-  "vim.useSystemClipboard": true,
-  "vim.textwidth": 105,
-  "editor.lineNumbers": "relative",
-  "editor.tabSize": 2,
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "j"],
-      "after": ["<Esc>"],
-    },
-    {
-      "before": ["<C-c>"],
-      "after": ["<Enter>"],
-    },
-  ],
-  "vim.visualModeKeyBindings": [
-    {
-      "before": ["<C-j>"],
-      "commands": ["editor.action.moveLinesDownAction"],
-    },
-    {
-      "before": ["<C-k>"],
-      "commands": ["editor.action.moveLinesUpAction"],
-    },
-  ],
-  "vim.normalModeKeyBindings": [
-    {
-      "before": ["<C-j>"],
-      "commands": ["editor.action.moveLinesDownAction"],
-    },
-    {
-      "before": ["<C-k>"],
-      "commands": ["editor.action.moveLinesUpAction"],
-    },
-  ],
-  "prettier.useEditorConfig": false,
-  "[python]": {
-    "breadcrumbs.showClasses": true,
-    "editor.tabSize": 4,
-  },
-  "elixirLS.projectDir": "chat_server",
-  "beautify.config": "",
-  "eslint.format.enable": true,
-  "php.validate.executablePath": "",
-  "liveshare.authenticationProvider": "GitHub",
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb",
-  },
-  "plantuml.render": "PlantUMLServer",
-  "plantuml.server": "http://localhost:8888",
+  // ── Editor: Appearance ──────────────────────────────────────────────
+  "workbench.colorTheme": "Gruvbox Dark (Medium)",
   "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
+  "editor.fontVariations": false,
   "editor.cursorStyle": "line",
-  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-  "editor.wordWrap": "on",
-  "editor.detectIndentation": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.editor.openSideBySideDirection": "down",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-  },
-  "git.autofetch": true,
-  "vim.easymotion": true,
-  "workbench.editor.enablePreview": false,
-  "workbench.colorTheme": "Gruvbox Dark (Medium)",
-  "todomd.activatePattern": "**/{z.notes.todo,todo}.md",
-  "githubPullRequests.pullBranch": "never",
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-  },
-  "python.analysis.importFormat": "relative",
-  "workbench.colorCustomizations": {
-    // "diffEditor.removedTextBackground": "#7d062c",
-    // "diffEditor.insertedTextBackground": "#3d5c0a",
-    // "diffEditor.removedLineBackground": "#430017",
-    // "diffEditor.insertedLineBackground": "#243c04",
-    // "diffEditorOverview.insertedForeground": "#50c423", // "#192c00",
-    // "diffEditorOverview.removedForeground": "#d10a50" // "#450017",
-  },
-  "svg.preview.mode": "svg",
-  "editor.inlineSuggest.enabled": true,
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false,
-    "yaml": false,
-    "python": false,
-  },
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
   "editor.guides.bracketPairs": true,
-  "gitlens.views.branches.branches.layout": "list",
-  "todo.file.include": [
-    "**/TODO",
-    "**/TODOS",
-    "**/*.TODO",
-    "**/*.TODOS",
-    "**/*.todo",
-    "**/*.todos",
-    "**/*.task",
-    "**/*.tasks",
-    "**/*.taskpaper",
-    "**/todolist.txt",
-    "**/todo.md",
-  ],
-  // "github.copilot.inlineSuggest.enable": false,
+  "editor.wordWrap": "on",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -199,9 +89,162 @@
       },
     ],
   },
+  "workbench.colorCustomizations": {
+    // "diffEditor.removedTextBackground": "#7d062c",
+    // "diffEditor.insertedTextBackground": "#3d5c0a",
+    // "diffEditor.removedLineBackground": "#430017",
+    // "diffEditor.insertedLineBackground": "#243c04",
+    // "diffEditorOverview.insertedForeground": "#50c423", // "#192c00",
+    // "diffEditorOverview.removedForeground": "#d10a50" // "#450017",
+  },
+
+  // ── Editor: Behavior ────────────────────────────────────────────────
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+  },
+
+  // ── Workbench: Layout ───────────────────────────────────────────────
+  "workbench.panel.defaultLocation": "right",
+  "workbench.editor.openSideBySideDirection": "down",
+  "workbench.editor.enablePreview": false,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb",
+  },
+  "explorer.confirmDragAndDrop": false,
+
+  // ── Files ───────────────────────────────────────────────────────────
+  "files.trimTrailingWhitespace": true,
   "files.associations": {
     "myLambda.sql": "rsql",
   },
+
+  // ── Terminal ────────────────────────────────────────────────────────
+  "terminal.external.osxExec": "iTerm2.app",
+  "terminal.integrated.macOptionIsMeta": true,
+
+  // ── Vim ─────────────────────────────────────────────────────────────
+  "vim.useSystemClipboard": true,
+  "vim.textwidth": 105,
+  "vim.easymotion": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"],
+    },
+    {
+      "before": ["<C-c>"],
+      "after": ["<Enter>"],
+    },
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<C-j>"],
+      "commands": ["editor.action.moveLinesDownAction"],
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["editor.action.moveLinesUpAction"],
+    },
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<C-j>"],
+      "commands": ["editor.action.moveLinesDownAction"],
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["editor.action.moveLinesUpAction"],
+    },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [],
+
+  // ── Language-specific overrides ─────────────────────────────────────
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+  },
+  "[python]": {
+    "breadcrumbs.showClasses": true,
+    "editor.tabSize": 4,
+  },
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true,
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // ── Formatters & Linters ────────────────────────────────────────────
+  "prettier.useEditorConfig": false,
+  "eslint.format.enable": true,
+  "beautify.config": "",
+  // "ruff.configurationPreference": "filesystemFirst",
+
+  // ── Git & GitHub ────────────────────────────────────────────────────
+  "git.autofetch": true,
+  "githubPullRequests.pullBranch": "never",
+  "liveshare.authenticationProvider": "GitHub",
+
+  // ── Extensions ──────────────────────────────────────────────────────
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "yaml": false,
+    "python": false,
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  // "github.copilot.inlineSuggest.enable": false,
+  "gitlens.views.branches.branches.layout": "list",
+  "plantuml.render": "PlantUMLServer",
+  "plantuml.server": "http://localhost:8888",
+  "elixirLS.projectDir": "chat_server",
+  "svg.preview.mode": "svg",
+  "csv.enabled": false,
+  "todomd.activatePattern": "**/{z.notes.todo,todo}.md",
+  "todo.file.include": [
+    "**/TODO",
+    "**/TODOS",
+    "**/*.TODO",
+    "**/*.TODOS",
+    "**/*.todo",
+    "**/*.todos",
+    "**/*.task",
+    "**/*.tasks",
+    "**/*.taskpaper",
+    "**/todolist.txt",
+    "**/todo.md",
+  ],
   "cSpell.userWords": [
     "abfss",
     "ADLS",
@@ -217,38 +260,17 @@
     "thunking",
     "Trilliant",
   ],
-  "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
-  },
-  "editor.fontVariations": false,
-  "github.copilot.editor.enableAutoCompletions": true,
-  "editor.minimap.enabled": false,
-  "http.proxyStrictSSL": false,
-  "explorer.confirmDragAndDrop": false,
-
-  "python.analysis.nodeExecutable": "/Users/caleb.gregory/.local/share/mise/installs/node/20.19.0/bin/node",
   "docker.extension.enableComposeLanguageServer": false,
   "thds-mono-vsc.autoRun": true,
-  "[dockercompose]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.autoIndent": "advanced",
-    "editor.quickSuggestions": {
-      "other": true,
-      "comments": false,
-      "strings": true,
-    },
-    "editor.defaultFormatter": "redhat.vscode-yaml",
-  },
-  "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
-  },
-  "vim.visualModeKeyBindingsNonRecursive": [],
   "claudeCode.preferredLocation": "sidebar",
   "claudeCode.useTerminal": true,
-  "terminal.integrated.macOptionIsMeta": true,
   "claudeCode.useCtrlEnterToSend": true,
-  // "ruff.configurationPreference": "filesystemFirst",
-  "csv.enabled": false,
-  "editor.formatOnSave": true
+
+  // ── Python ──────────────────────────────────────────────────────────
+  "python.analysis.importFormat": "relative",
+  "python.analysis.nodeExecutable": "/Users/caleb.gregory/.local/share/mise/installs/node/20.19.0/bin/node",
+
+  // ── Misc ────────────────────────────────────────────────────────────
+  "php.validate.executablePath": "",
+  "http.proxyStrictSSL": false
 }
