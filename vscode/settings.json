@@ -1,6 +1,6 @@
 {
   // ── Editor: Appearance ──────────────────────────────────────────────
-  "workbench.colorTheme": "Gruvbox Dark (Medium)",
+  "workbench.colorTheme": "Rubber",
   "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontVariations": false,
@@ -248,6 +248,7 @@
   "cSpell.userWords": [
     "abfss",
     "ADLS",
+    "CHECKMARK",
     "cpus",
     "Datavant",
     "Everly",
@@ -258,10 +259,9 @@
     "relpaths",
     "thds",
     "thunking",
-    "Trilliant",
+    "Trilliant"
   ],
   "docker.extension.enableComposeLanguageServer": false,
-  "thds-mono-vsc.autoRun": true,
   "claudeCode.preferredLocation": "sidebar",
   "claudeCode.useTerminal": true,
   "claudeCode.useCtrlEnterToSend": true,
@@ -270,7 +270,15 @@
   "python.analysis.importFormat": "relative",
   "python.analysis.nodeExecutable": "/Users/caleb.gregory/.local/share/mise/installs/node/20.19.0/bin/node",
 
+  // ── Version control ─────────────────────────────────────────────────
+  "extensions.autoUpdate": false,
+  "update.mode": "manual",
+
   // ── Misc ────────────────────────────────────────────────────────────
   "php.validate.executablePath": "",
-  "http.proxyStrictSSL": false
+  "http.proxyStrictSSL": false,
+  "gitlens.ai.model": "gitkraken",
+  "gitlens.ai.gitkraken.model": "gemini:gemini-2.5-flash",
+  "chat.disableAIFeatures": true,
+  "git.blame.editorDecoration.enabled": false
 }
