@@ -110,7 +110,7 @@
 
   // ── Workbench: Layout ───────────────────────────────────────────────
   "workbench.panel.defaultLocation": "right",
-  "workbench.editor.openSideBySideDirection": "down",
+  "workbench.editor.openSideBySideDirection": "right",
   "workbench.editor.enablePreview": false,
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb",
