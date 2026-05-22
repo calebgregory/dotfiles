@@ -46,6 +46,10 @@ alias docker-test="sudo docker run hello-world"
 
 alias now="node -e 'process.stdout.write(new Date().toISOString())'"
 
+# if you download binaries from the internet, osx's default behavior is to prohibit you from executing
+# it. you have to delete the quarantine flag.
+alias allow="xattr -d com.apple.quarantine"
+
 # wezterm
 
 alias wezlogs="ls -t ~/.local/share/wezterm | head -n 1 | xargs tail"
