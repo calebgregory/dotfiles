@@ -32,6 +32,8 @@ done
 ln -s ~/.dotfiles/dotfiles-of-peter/wezterm ~/.config
 ln -s ~/.dotfiles/mise.toml ~/.config/mise/config.toml
 ln -s ~/.dotfiles/lemonaid.toml ~/.config/lemonaid/config.toml
+mkdir -p ~/.config/yazi/
+ln -s ~/.dotfiles/yazi.toml ~/.config/yazi/yazi.toml
 
 for file in keybindings.json settings.json; do
   ln -s ~/.dotfiles/vscode/"$file" ~/"Library/Application Support/Code/User/$file"

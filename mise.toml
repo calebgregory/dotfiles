@@ -3,9 +3,9 @@ trusted_config_paths = ["~/work/ds-monorepo", "~/work/ds-monorepo-wt"]
 
 [tools]
 node = "24"
-python = ["3.13", "3.12", "3.10", "3.9", "3.8"]
+python = ["3.13", "3.12", "3.10"]
 gh = ["2"]
-uv = "0.9"
+uv = "0.10"
 usage = "2"
 
 # postgres = "17"
@@ -21,6 +21,7 @@ pnpm = "10"
 'pipx:xonsh[full]' = "0"
 aws-cli = "latest"
 fd = "10"
+fzf = "0"
 hyperfine = "1"
 ripgrep = "15"
 yazi = "26"

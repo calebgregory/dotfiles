@@ -268,7 +268,7 @@
 
   // ── Python ──────────────────────────────────────────────────────────
   "python.analysis.importFormat": "relative",
-  "python.analysis.nodeExecutable": "/Users/caleb.gregory/.local/share/mise/installs/node/20.19.0/bin/node",
+  "python.analysis.nodeExecutable": "~/.local/share/mise/installs/node/24/bin/node",
 
   // ── Version control ─────────────────────────────────────────────────
   "extensions.autoUpdate": false,
